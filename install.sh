@@ -1,6 +1,9 @@
 # not really needed since I'm not installing additional scripts
 #!/bin/bash
 
+# Needed to default to zsh shell when SSH'ing in
+sudo chsh "$(id -un)" --shell "/usr/bin/zsh"
+
 create_symlinks() {
     # Get the directory in which this script lives.
     script_dir=$(dirname "$(readlink -f "$0")")
